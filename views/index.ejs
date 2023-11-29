@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<!-- component -->
+<body class="bg-cover " style="background-image: url(https://mueblesfhoa.com/wp-content/uploads/2023/02/Diseno-sin-titulo-2023-02-14T121317.656.png);">
+	<nav class="relative px-4 py-4 flex justify-between items-center bg-gray-300">
+		<a class="text-3xl font-bold leading-none" href="#">
+			<svg class="h-2" alt="logo" viewBox="0 0 10240 10240">
+				<img src="https://pbs.twimg.com/profile_images/568129637197160448/2g1I7WBX_400x400.png" alt="" width="100px">
+			</svg>
+		</a>
+		<div class="lg:hidden">
+			<button class="navbar-burger flex items-center text-blue-600 p-3">
+				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Mobile menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+				</svg>
+			</button>
+		</div>
+		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+			<li><a class="text-sm text-black hover:text-blue-600" href="#">Home</a></li>
+			<li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-sm text-black font-bold" href="#">About Us</a></li>
+			<li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-sm text-black hover:text-blue-600" href="#">Services</a></li>
+			<li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-sm text-black hover:text-blue-600" href="#">Pricing</a></li>
+			<li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-sm text-black hover:text-blue-600" href="#">Contact</a></li>
+		</ul>
+		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-blue-500 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="/Login">Sign In</a>
+		<a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-700 text-sm text-white font-bold rounded-xl transition duration-200" href="/LoginAdm">Sign up</a>
+	</nav>
+	<div class="navbar-menu relative z-50 hidden">
+		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+			<div class="flex items-center mb-8">
+				<a class="mr-auto text-3xl font-bold leading-none" href="#">
+					<svg class="h-12" alt="logo" viewBox="0 0 10240 10240">
+            <img src="https://pbs.twimg.com/profile_images/568129637197160448/2g1I7WBX_400x400.png" alt="" width="100px">
+			        </svg>
+				</a>
+				<button class="navbar-close">
+					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div>
+				<ul>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-black hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Home</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-black hover:bg-blue-50 hover:text-blue-600 rounded" href="#">About Us</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-black hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Services</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-black hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Pricing</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-black hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mt-auto">
+				<div class="pt-6">
+					<a class="block px-4 py-3 mb-3 leading-loose text-xs text-center text-black font-semibold leading-none bg-indigo-200 hover:bg-indigo-600 hover:text-white rounded-xl" href="/Login">Sign in</a>
+					<a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-500 hover:bg-blue-700  rounded-xl" href="#">Sign Up</a>
+				</div>
+				<p class="my-4 text-xs text-center text-gray-400">
+					<span>Copyright © 2021</span>
+				</p>
+			</div>
+		</nav>
+	</div>
+</body>
+
+<script>
+// Burger menus
+document.addEventListener('DOMContentLoaded', function() {
+    // open
+    const burger = document.querySelectorAll('.navbar-burger');
+    const menu = document.querySelectorAll('.navbar-menu');
+
+    if (burger.length && menu.length) {
+        for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    // close
+    const close = document.querySelectorAll('.navbar-close');
+    const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+    if (close.length) {
+        for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    if (backdrop.length) {
+        for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+});
+</script>
+  <nav class="bg-black">
+    <p class="text-white mx-4">AHORRA UN 15% EN TODO</p>
+  </nav>
+
+  <!-- inicio slider -->
+  <div id="carouselExampleCaptions" class="relative" data-te-carousel-init data-te-ride="carousel">
+    <!--Carousel indicators-->
+    <div class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+      data-te-carousel-indicators>
+      <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="0" data-te-carousel-active
+        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="1"
+        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+        aria-label="Slide 2"></button>
+      <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="2"
+        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+        aria-label="Slide 3"></button>
+    </div>
+
+    <!--Carousel items-->
+    <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+      <!--First item-->
+      <div
+        class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        data-te-carousel-active data-te-carousel-item style="backface-visibility: hidden">
+        <img src="https://www.ikarahogar.com/assets/images/productos/muebles/forros3.jpg" class="block w-full"
+          alt="..." />
+        <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+          <h5 class="text-xl"></h5>
+          <p>
+            
+          </p>
+        </div>
+      </div>
+      <!--Second item-->
+      <div
+        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        data-te-carousel-item style="backface-visibility: hidden">
+        <img src="https://www.mueblesramis.com/wp-content/uploads/2018/06/104-SK.3-700x400.jpg" class="block w-full"
+          alt="..." />
+        <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+          <h5 class="text-xl"></h5>
+          <p>
+           
+          </p>
+        </div>
+      </div>
+      <!--Third item-->
+      <div
+        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        data-te-carousel-item style="backface-visibility: hidden">
+        <img src="https://arquitek.pe/wp-content/uploads/2023/08/image-145.png" class="block w-full" alt="..." />
+        <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+          <h5 class="text-xl"></h5>
+          <p>
+          
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--Carousel controls - prev item-->
+    <button
+      class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+      type="button" data-te-target="#carouselExampleCaptions" data-te-slide="prev">
+      <span class="inline-block h-8 w-8">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+      </span>
+      <span
+        class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
+    </button>
+    <!--Carousel controls - next item-->
+    <button
+      class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+      type="button" data-te-target="#carouselExampleCaptions" data-te-slide="next">
+      <span class="inline-block h-8 w-8">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </span>
+      <span
+        class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
+    </button>
+  </div>
+  <!-- fin slider -->
+  <h1 class="font-bold text-center text-3xl my-6 text-black"> Catalogo de producctos</h1>
+  <div class="container mx-4 grid md: grid-cols-2 xl:grid-cols-3 gap-4">
+    <div class=" rounded overflow-hidden shadow-lg">
+      <img class="w-full" src="/images/2.jpg" alt="Sunset in the mountains">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">Mesa de sala</div>
+        <p class="text-black">PRODUCTOS NUEVOS</p>
+        <p class="text-white text-base">
+          Precio recomendado de venta al publico
+        </p>
+        <form>
+          <p class="clasificacion">
+            <input id="radio1" type="radio" name="estrellas" value="5"><!--
+          --><label for="radio1">★</label><!--
+          --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+          --><label for="radio2">★</label><!--
+          --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+          --><label for="radio3">★</label><!--
+          --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+          --><label for="radio4">★</label><!--
+          --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+          --><label for="radio5">★</label>
+          </p>
+        </form>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <span
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">$45.00</span>
+        <span
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><s>$60.00</s></span>
+          <a href="/categories"> <button
+            type="button"
+            class="inline-block rounded bg-blue-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-blue-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+            data-te-ripple-init
+            data-te-ripple-color="light">
+            Button
+          </button></a>
+         
+        <!-- <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span> -->
+      </div>
+    </div>
+    <div class=" rounded overflow-hidden shadow-lg">
+      <img class="w-full" src="/images/3.jpg" alt="Sunset in the mountains">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">Sillas para sala</div>
+        <p class="text-black">PRODUCTOS NUEVOS</p>
+        <p class="text-white text-base">
+          Precio recomendado de venta al publico
+        </p>
+        <form>
+          <p class="clasificacion">
+            <input id="radio1" type="radio" name="estrellas" value="5"><!--
+          --><label for="radio1">★</label><!--
+          --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+          --><label for="radio2">★</label><!--
+          --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+          --><label for="radio3">★</label><!--
+          --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+          --><label for="radio4">★</label><!--
+          --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+          --><label for="radio5">★</label>
+          </p>
+        </form>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <span
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">70.00</span>
+        <span
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><s>40.00</s></span>
+        <!-- <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span> -->
+      </div>
+    </div>
+    <div class=" rounded overflow-hidden shadow-lg">
+      <img class="w-full" src="/images/4.jpg" alt="Sunset in the mountains">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">Sofa Grande color celeste</div>
+        <p class="text-black">PRODUCTOS NUEVOS</p>
+        <p class="text-white text-base">
+          Precio recomendado de venta al publico
+        </p>
+        <form>
+          <p class="clasificacion">
+            <input id="radio1" type="radio" name="estrellas" value="5"><!--
+          --><label for="radio1">★</label><!--
+          --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+          --><label for="radio2">★</label><!--
+          --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+          --><label for="radio3">★</label><!--
+          --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+          --><label for="radio4">★</label><!--
+          --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+          --><label for="radio5">★</label>
+          </p>
+        </form>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <span
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">90.00</span>
+        <span
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><s>120.00</s></span>
+        <!-- <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span> -->
+      </div>
+    </div>
+    <div class=" rounded overflow-hidden shadow-lg">
+      <img class="w-full" src="/images/5.jpg" alt="Sunset in the mountains">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">Juego de sala para terrasa</div>
+        <p class="text-black">PRODUCTOS NUEVOS</p>
+        <p class="text-white text-base ">
+          Precio recomendado de venta al publico
+        </p>
+        <form>
+          <p class="clasificacion">
+            <input id="radio1" type="radio" name="estrellas" value="5"><!--
+          --><label for="radio1">★</label><!--
+          --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+          --><label for="radio2">★</label><!--
+          --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+          --><label for="radio3">★</label><!--
+          --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+          --><label for="radio4">★</label><!--
+          --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+          --><label for="radio5">★</label>
+          </p>
+        </form>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <span
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">600.00</span>
+        <span
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><s>650.00</s></span>
+        <!-- <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span> -->
+      </div>
+    </div>
+    <div class=" rounded overflow-hidden shadow-lg">
+      <img class="w-full" src="/images/6.jpg" alt="Sunset in the mountains">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">Mesa y Silla para oficina</div>
+        <p class="text-black">PRODUCTOS NUEVOS</p>
+        <p class="text-white text-base">
+          Precio recomendado de venta al publico
+        </p>
+        <form>
+          <p class="clasificacion">
+            <input id="radio1" type="radio" name="estrellas" value="5"><!--
+          --><label for="radio1">★</label><!--
+          --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+          --><label for="radio2">★</label><!--
+          --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+          --><label for="radio3">★</label><!--
+          --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+          --><label for="radio4">★</label><!--
+          --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+          --><label for="radio5">★</label>
+          </p>
+        </form>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <span
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">150.00</span>
+        <span
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><s>200.00</s></span>
+        <!-- <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span> -->
+      </div>
+    </div>
+    <div class=" rounded overflow-hidden shadow-lg">
+      <img class="w-full" src="/images/7.jpg" alt="Sunset in the mountains">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">Bancos para cocina</div>
+        <p class="text-black">PRODUCTOS NUEVOS</p>
+        <p class="text-white text-base">
+          Precio recomendado de venta al publico
+        </p>
+        <form>
+          <p class="clasificacion">
+            <input id="radio1" type="radio" name="estrellas" value="5"><!--
+          --><label for="radio1">★</label><!--
+          --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+          --><label for="radio2">★</label><!--
+          --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+          --><label for="radio3">★</label><!--
+          --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+          --><label for="radio4">★</label><!--
+          --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+          --><label for="radio5">★</label>
+          </p>
+        </form>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <span
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">120.00</span>
+        <span
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><s>150.00</s></span>
+        <!-- <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span> -->
+      </div>
+    </div>
+  </div>
+  <div class="text-black text-lg font-bold  my-6 mx-4  ">
+    <h1 class="text-2xl">Cosas que puden interesarte</h1>
+  </div>
+  <!-- Component: Carousel with controls inside -->
+<div class="relative w-full glide-01 space-x-3 mx-4">
+  <!-- Slides -->
+  <div class="overflow-hidden" data-glide-el="track">
+      <ul class="relative w-full overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
+          <li><img src="https://www.punto-deco.com.ar/wp-content/uploads/muebles-para-reposo-3-600x400.jpg" class="w-full max-w-full max-h-full m-auto" /></li>
+          <li><img src="https://i.pinimg.com/736x/5c/0f/8a/5c0f8a8cd432e8a184307f2f13f87d60.jpg" class="w-full max-w-full max-h-full m-auto" /></li>
+          <li><img src="https://i.pinimg.com/736x/ee/93/6e/ee936ea455192d5886c45803df89885b.jpg" class="w-full max-w-full max-h-full m-auto" /></li>
+          <li><img src="https://decoramos.es/wp-content/uploads/2014/07/Salones-Jesse-Open-O14-e1404239228379-600x400.jpg" class="w-full max-w-full max-h-full m-auto" /></li>
+          <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrXahxffkLjtGBojotKX0mppYvReSIyaWvmQ&usqp=CAU" class="w-full max-w-full max-h-full m-auto" /></li>
+      </ul>
+  </div>
+  <!-- Controls -->
+  <div class="absolute left-0 flex items-center justify-between w-full h-0 px-4 top-1/2 " data-glide-el="controls">
+      <button class="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full lg:w-12 lg:h-12 text-slate-700 border-slate-700 hover:text-slate-900 hover:border-slate-900 focus-visible:outline-none bg-white/20" data-glide-dir="<" aria-label="prev slide">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <title>prev slide</title>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+          </svg>
+      </button>
+      <button class="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full lg:w-12 lg:h-12 text-slate-700 border-slate-700 hover:text-slate-900 hover:border-slate-900 focus-visible:outline-none bg-white/20" data-glide-dir=">" aria-label="next slide">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <title>next slide</title>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+          </svg>
+      </button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+
+<script>
+  var glide01 = new Glide('.glide-01', {
+      type: 'carousel',
+      focusAt: 'center',
+      perView: 3,
+      autoplay: 3000,
+      animationDuration: 700,
+      gap: 24,
+      classes: {
+          activeNav: '[&>*]:bg-slate-700',
+      },
+      breakpoints: {
+          1024: {
+              perView: 2
+          },
+          640: {
+              perView: 1
+          }
+      },
+  });
+
+  glide01.mount();
+</script>
+    <footer>
+      <!-- component -->
+      <div class="">
+
+        <footer class="w-full text-gray-700 bg-gray-100 body-font mx-4">
+          <div
+            class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
+            <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+              <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
+              </a>
+              <p class="mt-2 text-sm text-gray-500">Diseñe, codifique y envíe!</p>
+              <div class="mt-4">
+                <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
+                  <a class="text-gray-500 cursor-pointer hover:text-gray-700">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      class="w-5 h-5" viewBox="0 0 24 24">
+                      <path
+                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path stroke="none"
+                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                      </path>
+                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <div class="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Acerca de</h2>
+                <nav class="mb-10 list-none">
+                  <li class="mt-3">
+                    <a class="text-gray-500 cursor-pointer hover:text-gray-900">Compañía</a>
+                  </li>
+                  <li class="mt-3">
+                    <a class="text-gray-500 cursor-pointer hover:text-gray-900">Carreras</a>
+                  </li>
+                  <li class="mt-3">
+                    <a class="text-gray-500 cursor-pointer hover:text-gray-900">Blog</a>
+                  </li>
+                </nav>
+              </div>
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Apoyo</h2>
+                <nav class="mb-10 list-none">
+                  <li class="mt-3">
+                    <a class="text-gray-500 cursor-pointer hover:text-gray-900">Soporte de contacto</a>
+                  </li>
+                  <li class="mt-3">
+                    <a class="text-gray-500 cursor-pointer hover:text-gray-900">Recursos de ayuda</a>
+                  </li>
+                  <li class="mt-3">
+                    <a class="text-gray-500 cursor-pointer hover:text-gray-900">Actualizaciones de lanzamiento</a>
+                  </li>
+                </nav>
+              </div>
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Plataforma
+                </h2>
+                <nav class="mb-10 list-none">
+                  <li class="mt-3">
+                    <a class="text-gray-500 cursor-pointer hover:text-gray-900">Términos &amp; Privacidad</a>
+                  </li>
+                  <li class="mt-3">
+                    <a class="text-gray-500 cursor-pointer hover:text-gray-900">Precios</a>
+                  </li>
+                  <li class="mt-3">
+                    <a class="text-gray-500 cursor-pointer hover:text-gray-900">Preguntas frecuentes</a>
+                  </li>
+                </nav>
+              </div>
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Contacto</h2>
+                <nav class="mb-10 list-none">
+                  <li class="mt-3">
+                    <a class="text-gray-500 cursor-pointer hover:text-gray-900">Enviar un mensaje</a>
+                  </li>
+                  <li class="mt-3">
+                    <a class="text-gray-500 cursor-pointer hover:text-gray-900">Solicitar presupuesto</a>
+                  </li>
+                  <li class="mt-3">
+                    <a class="text-gray-500 cursor-pointer hover:text-gray-900">+123-456-7890</a>
+                  </li>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-300">
+            <div class="container px-5 py-4 mx-auto">
+              <p class="text-sm text-gray-700 capitalize xl:text-center">@grimaldo y abdul ing-sistemas</p>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script type="text/javascript" src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+</body>
+
+</html>
